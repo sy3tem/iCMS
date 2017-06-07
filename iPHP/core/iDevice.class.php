@@ -34,7 +34,7 @@ class iDevice {
         iPHP::$mobile = false;
         if (empty($device_tpl)) {
             //检查是否移动设备
-            if (self::agent(self::$config['mobile']['agent'])) {
+        if (self::agent(self::$config['mobile']['agent'])||self::$config['mobile']['domain']==iPHP_REQUEST_HOST ) {
                 iPHP::$mobile = true;
                 $device_name = 'mobile';
                 $device_tpl  = self::$config['mobile']['tpl'];
