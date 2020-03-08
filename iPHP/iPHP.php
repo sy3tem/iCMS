@@ -16,13 +16,13 @@ defined('iPHP') OR exit('What are you doing?');
 version_compare('5.3',PHP_VERSION,'>') && die('iPHP requires PHP version 5.3 or higher. You are running version '.PHP_VERSION.'.');
 
 ini_set('display_errors','ON');
-error_reporting(E_ALL & ~E_NOTICE);
+error_reporting(E_ALL^E_NOTICE^E_WARNING);
 
 @ini_set('magic_quotes_sybase', 0);
 @ini_set("magic_quotes_runtime",0);
 
 define('iPHP_PATH',dirname(strtr(__FILE__,'\\','/')));
-
+//var_dump(iPHP_PATH);exit;
 require_once iPHP_PATH.'/iPHP.version.php';
 require_once iPHP_PATH.'/iPHP.define.php';
 require_once iPHP_PATH.'/iPHP.compat.php';
