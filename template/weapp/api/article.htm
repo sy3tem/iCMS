@@ -1,9 +1,0 @@
-<!--{&$article.pubdate|date:"Y-m-d H:i"}-->
-<!--{&$article.source|html2text}-->
-<!--{&$article.body|regex_replace:'/<script.+?<\/script>/is':''}-->
-{
-"site":<!--{$site|json_encode}-->,
-"article":<!--{$article|json_encode}-->,
-"category":<!--{$category|json_encode}-->
-}
-<!--{clean}-->
